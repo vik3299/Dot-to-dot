@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <!-- Input Field -->
+    <TextView
+        android:id="@+id/hi_welcome_"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:paddingTop="69sp"
+        android:text="Get your Level"
+        android:paddingLeft="20sp"
+        android:fontFamily="@font/pop"
+        android:textSize="24sp" />
+
+    <TextView
+        android:id="@+id/hello"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="#C9C9C9"
+        app:layout_constraintTop_toBottomOf="@+id/hi_welcome_"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Level Up "
+        android:paddingLeft="20sp"
+        android:fontFamily="@font/pop"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/email_txt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/hello"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="Closing Price :"
+        android:paddingLeft="22sp"
+        android:fontFamily="@font/pop"
+        android:paddingTop="30sp"
+        android:textSize="20sp" />
+
+    <EditText
+        android:id="@+id/price_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/email_txt"
+        android:hint="Enter Closing Price :"
+        android:inputType="numberDecimal"
+        android:textColor="@color/black"
+        android:background="@drawable/edit"
+        android:layout_marginHorizontal="20dp"
+        android:paddingHorizontal="20dp"
+        android:paddingVertical="10dp" />
+
+    <!-- Support TextView -->
+    <TextView
+        android:id="@+id/supportLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Support"
+        android:textSize="18sp"
+        android:background="@drawable/sd"
+        android:paddingStart="10dp"
+        android:textColor="@color/white"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:fontFamily="@font/pop"
+        app:layout_constraintTop_toBottomOf="@id/price_input"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/resistanceLabel"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="8dp" />
+
+    <!-- Resistance TextView -->
+    <TextView
+        android:background="@drawable/ud"
+        android:id="@+id/resistanceLabel"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Resistance"
+        android:textSize="18sp"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp"
+        android:paddingStart="10dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/pop"
+        app:layout_constraintTop_toBottomOf="@id/price_input"
+        app:layout_constraintLeft_toRightOf="@id/supportLabel"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="20dp" />
+
+    <!-- Support ListView -->
+    <ListView
+        android:id="@+id/supportListView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/supportLabel"
+        app:layout_constraintLeft_toLeftOf="@id/supportLabel"
+        app:layout_constraintRight_toRightOf="@id/supportLabel"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Resistance ListView -->
+    <ListView
+        android:id="@+id/resistanceListView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/resistanceLabel"
+        app:layout_constraintLeft_toLeftOf="@id/resistanceLabel"
+        app:layout_constraintRight_toRightOf="@id/resistanceLabel"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/white"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btn_level"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="20dp"
+        android:textSize="20dp"
+        android:text="Get Level"
+        android:background="@drawable/login"
+        android:paddingBottom="10dp"
+        android:layout_marginRight="20sp"
+        android:layout_marginLeft="20sp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:paddingTop="10sp"
+        android:fontFamily="@font/pop"
+        android:layout_marginVertical="25dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
